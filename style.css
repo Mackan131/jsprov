@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+h1 {
+    position: absolute;
+    top: 1px;
+    left: 100px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+h4 {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+  }
+img {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+}
+button {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    cursor: pointer;
+    width: 120px;
+    border: 2px solid black;
+    padding: 10px;
+}
+button:hover {
+    background-color: orange;
+  }
+#hiddenDiv {
+    background-color: lightgray;
+    padding: 10px;
+    margin-top: 20px;
+    display: none;
+}
+.rut{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    justify-content: center;
+    background-color: brown;
+    padding: 2%;
+    border-radius: 10px;
+}

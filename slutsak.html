@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max dahlkvist</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1 id="header">Välkommen!</h1>
+    <img id="picture" src="https://www.supercars.net/blog/wp-content/uploads/2022/02/Ferrari-SF90-Stradale-1.jpg" alt="Bild" height="200px" width="300px">
+    <div class="rut">
+        <button onclick="changeBgColor('red')">Röd bakgrund</button>
+        <button onclick="changeBgColor('green')">Grön bakgrund</button>
+        <button onclick="changeBgColor('blue')">Blå bakgrund</button>
+        <button onclick="togglePicture()">Visa/Dölj bild</button>
+        <button onclick="changePicture()">Byt bild</button>
+        <button onclick="changeHeaderText('hej hej')">Ändra rubrik</button>
+        <button onclick="toggleDiv()">Visa/Dölj dold div</button>
+        <button onclick="showTime()">Tid</button>
+        <button onclick="resetPage()">Återställ sida</button>
+    </div>
+  
+    <div id="hiddenDiv">
+        <p>hej hej hej hej hej hej</p>
+    </div>
+  
+    <h4 id="timeDisplay"></h4>
+    
+    <script>
+        function changeBgColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    
+        function togglePicture() {
+            var picture = document.getElementById('picture');
+            if (picture.style.display === 'none') {
+            picture.style.display = 'block';
+            } else {
+            picture.style.display = 'none';
+            }
+        }
+    
+        function changePicture() {
+            var picture = document.getElementById('picture');
+            picture.src = 'https://dagensps.fra1.cdn.digitaloceanspaces.com/uploads/2022/09/01_34_front_G_crop_A4-min-1380x776.jpg';
+        }
+    
+        function changeHeaderText(text) {
+            var header = document.getElementById('header');
+            header.textContent = text;
+        }
+    
+        function toggleDiv() {
+            var hiddenDiv = document.getElementById('hiddenDiv');
+            if (hiddenDiv.style.display === 'none') {
+            hiddenDiv.style.display = 'block';
+            } else {
+            hiddenDiv.style.display = 'none';
+            }
+        }
+    
+        function showTime() {
+            var currentTime = new Date().toLocaleTimeString();
+            var timeDisplay = document.getElementById('timeDisplay');
+            timeDisplay.textContent = 'Aktuell tid: ' + currentTime;
+        }
+
+        function resetPage() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
